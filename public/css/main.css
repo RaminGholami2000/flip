@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card{
+    width: 350px;
+    height: 450px;
+    margin: 20px auto;
+    perspective: 800px;
+    position: relative;
+    transition: 100ms;
+
+    .image{
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+      transform-origin: center;
+      backface-visibility: hidden;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+   
+        }
+    }
+    .details{
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        transform: rotateY(-180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 300ms;
+        & h2{
+            font-size: 36px;
+            color: whitesmoke;
+            text-transform: capitalize;
+        }
+        & p{
+            color: whitesmoke;
+            font-size: 24px;
+        }
+        & a{
+            width: 150px;
+            height: 50px;
+            border-radius: 8% 10%;
+            background-color: green;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: whitesmoke;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    &:hover{
+        box-shadow: 5px 5px 5px black;
+        transition: 300ms;
+        transition-delay: 300ms;
+        .image{
+            transform: rotateY(180deg);
+        }
+        .details{
+            transform: rotateY(0deg);
+        }
+    }
+
+}
+.slider_1{
+    width: 100%;
+    height: 600px;
+    .swiper {
+        width: 100%;
+        height: 100%;
+        .swiper-wrapper{
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               & img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                
+                  }
+              }
+        }
+      }
+}
+
+.slide_2{
+    width: 100%;
+    height: 250px;
+}
+  
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
